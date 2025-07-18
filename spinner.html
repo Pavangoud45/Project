@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <style>
+      @keyframes Spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      body {
+        background-color: rgb(70, 68, 68);
+      }
+      .container,
+      .container-1,
+      .container-2 {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+      }
+      .box {
+        background-color: #0e0d0d;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 470px;
+        height: 300px;
+      }
+
+      .spinner {
+        border-left: 3px solid rgb(236, 225, 225);
+        border-right: 3px solid rgb(236, 225, 225);
+        border-top: 3px solid rgb(236, 225, 225);
+        border-bottom: 3px solid red;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        animation-name: Spin;
+        animation: Spin 1s linear infinite;
+      }
+      .spinner-2 {
+        border-left: 3px solid rgb(236, 225, 225);
+        border-right: 3px solid rgb(236, 225, 225);
+        border-top: 3px solid rgb(236, 225, 225);
+        border-bottom: 3px solid transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        animation: Spin 1s linear infinite;
+      }
+      .spinner-3 {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s linear infinite;
+      }
+      .spinner-3::after {
+        content: "";
+        border-left: 3px solid #ff3d00;
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 3px;
+        height: 24px;
+        transform: translateX(-50%);
+      }
+      .spinner-4 {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s infinite linear;
+      }
+      .spinner-4::after {
+        content: "";
+        box-sizing: border-box;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-bottom-color: #ff3d00;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+      }
+      .spinner-5 {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s infinite linear;
+      }
+      .spinner-5::before {
+        content: "";
+        box-sizing: border-box;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-bottom-color: #ff3d00;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+      }
+      .spinner-6 {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s infinite linear;
+      }
+      .spinner-6::after {
+        content: "";
+        box-sizing: border-box;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-bottom-color: #ff3d00;
+        border-top-color: #ff3d00;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+      }
+      .spinner-7 {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s infinite linear;
+      }
+      .spinner-7::before {
+        content: "";
+        box-sizing: border-box;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-bottom-color: #ff3d00;
+        border-top-color: #ff3d00;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+      }
+      .spinner-8 {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s infinite linear;
+      }
+      .spinner-8::after,
+      .spinner-8:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #ff3d00;
+        width: 6px;
+        height: 6px;
+        transform: translate(150%, 150%);
+        border-radius: 50%;
+      }
+      .spinner-8::before {
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        transform: translate(-150%, -150%);
+      }
+      .spinner-9 {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        box-sizing: border-box;
+        animation: Spin 1s infinite linear;
+      }
+      .spinner-9::after,
+      .spinner-9::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #ff3d00;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+      .spinner-9::before {
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"><span class="spinner"></span></div>
+      <div class="box"><span class="spinner-2"></span></div>
+      <div class="box"><span class="spinner-3"></span></div>
+    </div>
+    <div class="container-1">
+      <div class="box"><span class="spinner-4"></span></div>
+      <div class="box"><span class="spinner-5"></span></div>
+      <div class="box"><span class="spinner-6"></span></div>
+    </div>
+    <div class="container-2">
+      <div class="box"><span class="spinner-7"></span></div>
+      <div class="box"><span class="spinner-8"></span></div>
+      <div class="box"><span class="spinner-9"></span></div>
+    </div>
+  </body>
+</html>
